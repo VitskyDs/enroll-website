@@ -6,7 +6,7 @@ const ROWS = [
   ['Pricing',                      '❌ Enterprise budgets',   '✅ Founding-member pricing'],
 ]
 
-const th = { padding: '1rem 1.5rem', fontSize: '0.75rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', borderBottom: '1px solid var(--border)' }
+const th = { padding: '0.875rem 1.5rem', fontSize: '0.72rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', borderBottom: '1px solid var(--border)' }
 const td = base => ({ padding: '1.05rem 1.5rem', fontSize: '0.875rem', ...base })
 
 export default function CompetitiveBar() {
@@ -25,15 +25,15 @@ export default function CompetitiveBar() {
           <table style={{ width: '100%', borderCollapse: 'collapse' }}>
             <thead>
               <tr>
-                <th style={{ ...th, textAlign: 'left', color: 'var(--muted)' }} />
-                <th style={{ ...th, textAlign: 'center', color: 'var(--muted)' }}>Others</th>
-                <th style={{ ...th, textAlign: 'center', color: 'var(--orange)', background: 'var(--orange-bg)' }}>Enroll ✦</th>
+                <th style={{ ...th, textAlign: 'left', color: 'var(--muted)', width: '40%' }}>Feature</th>
+                <th style={{ ...th, textAlign: 'center', color: 'var(--muted)', width: '30%' }}>Others</th>
+                <th style={{ ...th, textAlign: 'center', color: 'var(--dark)', background: 'var(--orange-bg)', width: '30%' }}>Enroll ✦</th>
               </tr>
             </thead>
             <tbody>
               {ROWS.map(([feature, others, enroll], i) => (
-                <tr key={i} style={{ borderBottom: i < ROWS.length - 1 ? '1px solid #f0ece6' : 'none' }}>
-                  <td style={td({ color: 'var(--dark)', fontWeight: 500 })}>{feature}</td>
+                <tr key={i} style={{ borderBottom: i < ROWS.length - 1 ? '1px solid var(--border)' : 'none' }}>
+                  <td style={td({ color: 'var(--dark)', fontWeight: 600 })}>{feature}</td>
                   <td style={td({ textAlign: 'center', color: 'var(--muted)' })}>{others}</td>
                   <td style={td({ textAlign: 'center', background: 'var(--orange-bg)', color: 'var(--dark)', fontWeight: 500 })}>{enroll}</td>
                 </tr>

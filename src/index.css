@@ -1,109 +1,31 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
   font-family: 'Inter', system-ui, sans-serif;
-  background: #fff;
-  color: #1a1a1a;
+  background: #f4faff;
+  color: #141d21;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
 a { text-decoration: none; color: inherit; }
 
 :root {
-  --orange:      #e8490f;
-  --orange-dark: #c93d0a;
-  --orange-bg:   #fdf1ec;
-  --cream:       #f5f2ed;
-  --cream-2:     #ede9e2;
-  --white:       #ffffff;
-  --dark:        #111111;
-  --mid:         #444444;
-  --muted:       #767676;
-  --border:      #e2ddd7;
-  --blue:        #1f6ce8;
+  --burgundy:       #61001d;
+  --burgundy-btn:   #811b32;
+  --page-bg:        #f4faff;
+  --section-bg:     #ecf5fc;
+  --accent-light:   #e0e9f0;
+  --accent-light-2: #e6eff6;
+  --heading:        #141d21;
+  --body:           #576065;
+  --muted:          #564143;
+  --muted-2:        #594141;
+  --nav-link:       #475569;
+  --footer-text:    #64748b;
+  --white:          #ffffff;
+  --border:         #f2f2f2;
+  --font-heading:   'Plus Jakarta Sans', sans-serif;
+  --font-body:      'Inter', sans-serif;
 }
-
-.container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
-
-.eyebrow {
-  display: inline-flex; align-items: center; gap: 6px;
-  font-size: 0.75rem; font-weight: 600;
-  letter-spacing: 0.12em; text-transform: uppercase;
-  color: var(--orange);
-}
-
-.placeholder-box {
-  background: #ede8e1;
-  display: flex; flex-direction: column; align-items: center;
-  justify-content: center; text-align: center;
-  gap: 0.625rem; padding: 2.5rem 2rem;
-  color: #8a7f77; font-size: 0.82rem; line-height: 1.6;
-  border-radius: 14px;
-  border: 1px solid var(--cream-2);
-}
-.placeholder-box .p-icon { font-size: 2.5rem; opacity: 0.45; display: block; }
-.placeholder-box strong { font-size: 0.875rem; font-weight: 600; color: #5a5148; }
-
-.btn {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 0.75rem 1.6rem; border-radius: 6px;
-  font-family: inherit; font-size: 0.925rem; font-weight: 600;
-  cursor: pointer; border: none; transition: all 0.16s ease;
-  white-space: nowrap;
-}
-.btn-orange { background: var(--orange); color: #fff; }
-.btn-orange:hover { background: var(--orange-dark); transform: translateY(-1px); }
-.btn-blue { background: var(--blue); color: #fff; }
-.btn-blue:hover { background: #185ac2; transform: translateY(-1px); }
-.btn-lg { padding: 0.9rem 1.85rem; font-size: 1rem; }
-.btn-text {
-  background: none; border: none; color: var(--blue);
-  padding: 0; font-size: 0.925rem; font-weight: 600; cursor: pointer;
-  display: inline-flex; align-items: center; gap: 4px;
-  font-family: inherit;
-}
-.btn-text:hover { color: #185ac2; }
-
-.chip {
-  padding: 0.4rem 0.9rem; border-radius: 100px;
-  border: 1.5px solid var(--border); background: #fff;
-  font-family: inherit; font-size: 0.82rem; font-weight: 500;
-  color: var(--mid); cursor: pointer; transition: all 0.13s;
-}
-.chip:hover { border-color: var(--orange); color: var(--orange); }
-.chip.active { background: var(--orange); border-color: var(--orange); color: #fff; }
-
-.chip-dark {
-  border-color: rgba(255,255,255,0.35); background: transparent;
-  color: rgba(255,255,255,0.8);
-}
-.chip-dark:hover { border-color: #fff; color: #fff; }
-.chip-dark.active { background: rgba(255,255,255,0.2); border-color: #fff; color: #fff; }
-
-.email-input {
-  flex: 1; min-width: 200px; padding: 0.8rem 1.15rem;
-  border-radius: 6px; border: 1.5px solid var(--border); background: #fff;
-  font-family: inherit; font-size: 0.95rem; color: var(--dark);
-  outline: none; transition: border-color 0.18s;
-}
-.email-input:focus { border-color: var(--orange); }
-.email-input::placeholder { color: #bbb; }
-
-.email-input-dark {
-  border-color: rgba(255,255,255,0.3); background: rgba(255,255,255,0.12);
-  color: #fff;
-}
-.email-input-dark::placeholder { color: rgba(255,255,255,0.45); }
-.email-input-dark:focus { border-color: rgba(255,255,255,0.7); }
-
-.form-label {
-  display: block; font-size: 0.8rem; font-weight: 600;
-  color: var(--mid); margin-bottom: 0.75rem;
-}
-.form-label-dark { color: rgba(255,255,255,0.65); }
-
-.chip-row { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-bottom: 1.25rem; }
-.input-row { display: flex; gap: 0.625rem; flex-wrap: wrap; }

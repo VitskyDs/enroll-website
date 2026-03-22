@@ -1,17 +1,49 @@
 export default function Footer() {
   return (
-    <footer style={{ background: 'var(--dark)', borderTop: '1px solid rgba(255,255,255,0.06)', padding: '1.75rem 1.5rem' }}>
-      <div style={{ maxWidth: 1100, margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem' }}>
-        <div style={{ fontSize: '1.1rem', fontWeight: 800, color: 'var(--orange)', letterSpacing: '-0.04em' }}>enroll</div>
-        <div style={{ display: 'flex', gap: '1.75rem' }}>
-          {['Privacy','Terms','Contact'].map(l => (
-            <a key={l} href="#" style={{ fontSize: '0.83rem', color: 'rgba(255,255,255,0.4)', transition: 'color 0.15s' }}
-              onMouseEnter={e => e.currentTarget.style.color = 'rgba(255,255,255,0.75)'}
-              onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.4)'}>{l}</a>
-          ))}
+    <footer style={{
+      background: '#f4faff', borderTop: '1px solid #f1f5f9',
+      padding: '49px 24px 48px',
+    }}>
+      <div className="footer-inner" style={{
+        maxWidth: 1280, margin: '0 auto',
+        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+      }}>
+        <div>
+          <div style={{
+            fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: 20,
+            color: '#61001d', marginBottom: 16, lineHeight: '28px',
+          }}>Enroll</div>
+          <div style={{
+            fontFamily: 'var(--font-body)', fontSize: 14, color: '#64748b', lineHeight: '20px',
+          }}>© 2026 Enroll. All rights reserved.</div>
         </div>
-        <p style={{ fontSize: '0.78rem', color: 'rgba(255,255,255,0.22)' }}>© 2025 Enroll. All rights reserved.</p>
+
+        <div className="footer-links" style={{ display: 'flex', gap: 32 }}>
+          <a href="#" style={{
+            fontFamily: 'var(--font-body)', fontSize: 14, color: '#64748b', lineHeight: '20px',
+          }}>Privacy Policy</a>
+          <a href="#" style={{
+            fontFamily: 'var(--font-body)', fontSize: 14, color: '#64748b', lineHeight: '20px',
+          }}>Terms of Service</a>
+          <a href="#" style={{
+            fontFamily: 'var(--font-body)', fontSize: 14, color: '#64748b', lineHeight: '20px',
+          }}>Contact Us</a>
+        </div>
       </div>
+
+      <style>{`
+        @media (max-width: 640px) {
+          .footer-inner {
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            gap: 24px !important;
+          }
+          .footer-links {
+            flex-direction: column !important;
+            gap: 12px !important;
+          }
+        }
+      `}</style>
     </footer>
   )
 }

@@ -1,25 +1,68 @@
 export default function Testimonial() {
   return (
-    <section style={{ background: '#fff', padding: '88px 1.5rem' }}>
-      <div className="container">
-        <div style={{ maxWidth: 820, margin: '0 auto', display: 'grid', gridTemplateColumns: 'auto 1fr', gap: '3rem', alignItems: 'center' }} className="testimonial-grid">
-          <div style={{ width: 120, height: 120, borderRadius: '50%', background: 'var(--cream)', border: '3px solid var(--cream-2)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '2.5rem', flexShrink: 0 }}>
-            💇
-          </div>
-          <div>
-            <div style={{ display: 'inline-flex', alignItems: 'center', gap: 5, background: '#edfaf3', border: '1px solid #82e0a9', borderRadius: 100, padding: '0.3rem 0.75rem', fontSize: '0.78rem', fontWeight: 600, color: '#1a7a44', marginBottom: '1rem' }}>
-              ↑ 34% more repeat visits in 60 days
-            </div>
-            <blockquote style={{ fontSize: 'clamp(1.1rem, 2vw, 1.4rem)', fontWeight: 600, lineHeight: 1.45, color: 'var(--dark)', marginBottom: '1.25rem', letterSpacing: '-0.01em' }}>
-              "With Enroll, I finally have a loyalty program that feels like mine. My regulars love it — and I'm seeing more of them, more often."
-            </blockquote>
-            <cite style={{ fontStyle: 'normal', fontSize: '0.875rem', color: 'var(--muted)', fontWeight: 500 }}>
-              Maria G. &nbsp;·&nbsp; Owner, Luxe Salon &amp; Spa &nbsp;·&nbsp; Early Access Member
-            </cite>
-          </div>
+    <section style={{ background: '#fff', maxWidth: 1280 }}>
+      <div style={{
+        background: '#ecf5fc', borderRadius: 48, padding: '96px 48px',
+        display: 'flex', flexDirection: 'column', alignItems: 'center'
+      }} className="testimonial-card">
+        {/* Avatar */}
+        <div style={{ marginBottom: 40 }}>
+          <img
+            src="/testimonial-avatar.jpg"
+            alt="Marcus Chen"
+            style={{
+              width: 80, height: 80, borderRadius: '50%', objectFit: 'cover',
+              boxShadow: '0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1)',
+            }}
+          />
         </div>
+
+        {/* Quote */}
+        <blockquote style={{
+          fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: 36,
+          lineHeight: '40px', color: '#141d21', textAlign: 'center',
+          maxWidth: 768, margin: 0,
+        }} className="testimonial-quote">
+          "Before Enroll, we were competing on price. Now, we're competing on
+          community. Our daily visit rate is up 30%, and we finally know who our regulars
+          actually are."
+        </blockquote>
+
+        {/* Attribution */}
+        <div style={{ marginTop: 40, textAlign: 'center' }}>
+          <div style={{
+            fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: 20,
+            color: '#61001d', lineHeight: '28px',
+          }}>Marcus Chen</div>
+          <div style={{
+            fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: 16,
+            color: '#564143', lineHeight: '24px',
+          }}>Founder, The Coffee Lab</div>
+        </div>
+        
       </div>
-      <style>{`@media(max-width:768px){.testimonial-grid{grid-template-columns:1fr !important; gap:1.5rem !important}}`}</style>
+
+      <style>{`
+        @media (max-width: 900px) {
+          .testimonial-card {
+            padding: 48px 32px !important;
+            border-radius: 32px !important;
+          }
+          .testimonial-quote {
+            font-size: 24px !important;
+            line-height: 32px !important;
+          }
+        }
+        @media (max-width: 640px) {
+          .testimonial-quote {
+            font-size: 20px !important;
+            line-height: 28px !important;
+          }
+          .testimonial-card {
+            padding: 40px 24px !important;
+          }
+        }
+      `}</style>
     </section>
   )
 }

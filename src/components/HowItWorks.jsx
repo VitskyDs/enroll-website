@@ -1,24 +1,21 @@
 const STEPS = [
   {
-    num: '01', flip: false,
-    title: "Tell us about your business",
-    body: "Enroll's AI learns your brand, customers, and goals. Answer a few questions — it handles the rest. No technical knowledge needed.",
-    icon: '🧠', vLabel: 'Onboarding Screen',
-    vDesc: 'Friendly AI onboarding asking warm, simple questions — brand name, customer vibe, goals. Clean, approachable UI.',
+    num: '01',
+    title: 'Tell us about your business',
+    body: "Answer a few questions about your brand, customers, and goals. Enroll's AI handles everything from there — no technical knowledge needed.",
+    icon: '🧠',
   },
   {
-    num: '02', flip: true,
+    num: '02',
     title: 'Launch your custom program',
-    body: "Loyalty tiers, rewards, and subscriptions go live — no code. Your branded program is up in days, not months.",
-    icon: '🚀', vLabel: 'Program Builder',
-    vDesc: 'Tier names, reward values, a live preview of the customer-facing loyalty card populating in real time. Warm, instant feel.',
+    body: 'Loyalty tiers, rewards, and subscriptions go live — no code. Your branded program is up in days, not months.',
+    icon: '🚀',
   },
   {
-    num: '03', flip: false,
+    num: '03',
     title: 'Watch retention grow',
-    body: "AI continuously optimizes your program as data comes in — see which rewards drive repeat visits and let Enroll tune it automatically.",
-    icon: '📈', vLabel: 'Analytics Dashboard',
-    vDesc: 'Retention curve trending up-right, visit frequency bar chart, top returning customers list. Clean, confident, warm tones.',
+    body: 'AI continuously optimizes your program as data comes in. See which rewards drive repeat visits and let Enroll tune it automatically.',
+    icon: '📈',
   },
 ]
 
@@ -31,32 +28,28 @@ export default function HowItWorks() {
           Up and running in three steps
         </h2>
 
-        <div style={{ display: 'flex', flexDirection: 'column', marginTop: '3.5rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.5rem', marginTop: '3.5rem' }} className="hiw-grid">
           {STEPS.map((step, i) => (
             <div key={i} style={{
-              display: 'grid',
-              gridTemplateColumns: step.flip ? '1fr 1fr' : '1fr 1fr',
-              gap: '4rem', alignItems: 'center',
-              padding: i === 0 ? '0 0 3.5rem' : '3.5rem 0',
-              borderTop: i > 0 ? '1px solid var(--cream-2)' : 'none',
-              direction: step.flip ? 'rtl' : 'ltr',
-            }} className="hiw-row">
-              <div style={{ direction: 'ltr' }}>
-                <p style={{ fontSize: '3.5rem', fontWeight: 800, color: 'var(--cream-2)', letterSpacing: '-0.05em', lineHeight: 1, marginBottom: '0.25rem' }}>{step.num}</p>
-                <h3 style={{ fontSize: '1.4rem', fontWeight: 700, color: 'var(--dark)', letterSpacing: '-0.02em', margin: '0.25rem 0 0.75rem' }}>{step.title}</h3>
-                <p style={{ color: 'var(--muted)', lineHeight: 1.72, maxWidth: 380 }}>{step.body}</p>
-                <button className="btn-text" style={{ marginTop: '1.25rem' }}>Learn more →</button>
-              </div>
-              <div className="placeholder-box" style={{ minHeight: 280, direction: 'ltr' }}>
-                <span className="p-icon">{step.icon}</span>
-                <strong>{step.vLabel}</strong>
-                <span>{step.vDesc}</span>
-              </div>
+              background: '#fff', border: '1px solid var(--border)', borderRadius: 14,
+              padding: '2rem 1.75rem',
+              display: 'flex', flexDirection: 'column', gap: '0.75rem',
+            }}>
+              <p style={{ fontSize: '2.75rem', fontWeight: 800, color: 'var(--cream-2)', letterSpacing: '-0.05em', lineHeight: 1, margin: 0 }}>
+                {step.num}
+              </p>
+              <span style={{ fontSize: '1.6rem', lineHeight: 1 }}>{step.icon}</span>
+              <h3 style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--dark)', letterSpacing: '-0.02em', margin: 0 }}>
+                {step.title}
+              </h3>
+              <p style={{ color: 'var(--muted)', lineHeight: 1.72, fontSize: '0.9rem', margin: 0 }}>
+                {step.body}
+              </p>
             </div>
           ))}
         </div>
       </div>
-      <style>{`@media(max-width:900px){.hiw-row{grid-template-columns:1fr !important; direction:ltr !important; gap:1.75rem !important}}`}</style>
+      <style>{`@media(max-width:768px){.hiw-grid{grid-template-columns:1fr !important}}`}</style>
     </section>
   )
 }
