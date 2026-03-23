@@ -44,7 +44,7 @@ export default function FinalCTA() {
         }
         @media (max-width: 640px) {
           .cta-inner {
-            padding: 40px 24px 48px !important;
+            padding: 32px 20px 40px !important;
           }
           .cta-heading {
             font-size: 28px !important;
