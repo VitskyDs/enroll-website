@@ -16,15 +16,30 @@ export default function HomePage() {
         <StatsStrip />
         <Playbook />
         <BentoFeatures />
-        <div style={{
-        background: '#fff', borderRadius: 48, padding: '96px 96px',
-        display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 96
-      }}>
-      
-<Testimonial />
-        <FinalCTA />
-
+        <div className="home-content-section" style={{
+          background: '#fff', borderRadius: 48, padding: '96px 96px',
+          display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 96
+        }}>
+          <Testimonial />
+          <FinalCTA />
         </div>
+
+        <style>{`
+          @media (max-width: 900px) {
+            .home-content-section {
+              padding: 64px 48px !important;
+              gap: 64px !important;
+              border-radius: 32px !important;
+            }
+          }
+          @media (max-width: 640px) {
+            .home-content-section {
+              padding: 48px 20px !important;
+              gap: 48px !important;
+              border-radius: 24px !important;
+            }
+          }
+        `}</style>
         
       </main>
       <Footer />
