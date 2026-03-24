@@ -1,9 +1,9 @@
 export default function BentoFeatures() {
   return (
-    <section style={{ background: '#f4faff', padding: '96px 24px' }}>
+    <section className="bento-section" style={{ background: '#f4faff', padding: '96px 24px' }}>
       <div style={{ maxWidth: 1280, margin: '0 auto' }}>
         {/* Header */}
-        <div style={{ textAlign: 'center', marginBottom: 80, maxWidth: 672, margin: '0 auto 80px' }}>
+        <div className="bento-header" style={{ textAlign: 'center', marginBottom: 80, maxWidth: 672, margin: '0 auto 80px' }}>
           <h2 style={{
             fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: 36,
             color: '#141d21', lineHeight: '40px', letterSpacing: '-0.9px', margin: 0,
@@ -224,18 +224,19 @@ export default function BentoFeatures() {
 
       <style>{`
         @media (max-width: 900px) {
+          .bento-section { padding: 64px 20px !important; }
           .bento-grid {
             grid-template-columns: 1fr !important;
           }
           .bento-span-2 {
             grid-column: span 1 !important;
-          }
-          .bento-span-2 {
             flex-direction: column !important;
           }
           .bento-text-col {
             flex: unset !important;
           }
+          .bento-header { margin-bottom: 40px !important; }
+          .bento-header h2 { font-size: 28px !important; line-height: 34px !important; }
         }
         @media (max-width: 640px) {
           .bento-mockup {

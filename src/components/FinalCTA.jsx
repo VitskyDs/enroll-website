@@ -3,7 +3,7 @@ import { WaitlistForm } from './Hero'
 export default function FinalCTA() {
   return (
     <section id="final-cta" style={{
-      maxWidth: 1280, margin: '0 auto', padding: '0 24px',
+      maxWidth: 1280, margin: '0 auto', padding: '0 24px', width: '100%',
     }}>
       <div style={{
         background: '#61001d',
@@ -33,22 +33,36 @@ export default function FinalCTA() {
 
       <style>{`
         @media (max-width: 900px) {
+          #final-cta { padding: 0 16px !important; }
           .cta-inner {
-            padding: 48px 32px 56px !important;
-            border-radius: 32px !important;
+            padding: 48px 28px 56px !important;
+            border-radius: 28px !important;
           }
           .cta-heading {
             font-size: 32px !important;
             line-height: 36px !important;
           }
+          .waitlist-form {
+            max-width: 100% !important;
+            width: 100% !important;
+          }
         }
         @media (max-width: 640px) {
+          #final-cta { padding: 0 12px !important; }
           .cta-inner {
             padding: 32px 20px 40px !important;
+            border-radius: 24px !important;
           }
           .cta-heading {
             font-size: 28px !important;
             line-height: 32px !important;
+          }
+          .waitlist-form {
+            flex-direction: column !important;
+          }
+          .waitlist-form input,
+          .waitlist-form button {
+            width: 100% !important;
           }
         }
       `}</style>

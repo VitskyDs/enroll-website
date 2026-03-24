@@ -20,7 +20,7 @@ export default function StatsStrip() {
   return (
     <section id="why-enroll" style={{ background: '#f4faff', padding: '80px 24px' }}>
       <div style={{ maxWidth: 1280, margin: '0 auto' }}>
-        <div style={{ marginBottom: 64 }}>
+        <div className="stats-header" style={{ marginBottom: 64 }}>
           <div style={{
             fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: 12,
             textTransform: 'uppercase', letterSpacing: '1.2px', color: '#61001d',
@@ -59,6 +59,8 @@ export default function StatsStrip() {
       <style>{`
         @media (max-width: 900px) {
           .stats-grid { grid-template-columns: 1fr !important; }
+          #why-enroll { padding: 64px 20px !important; }
+          #why-enroll .stats-header { margin-bottom: 40px !important; }
         }
       `}</style>
     </section>

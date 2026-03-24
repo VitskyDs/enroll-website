@@ -92,7 +92,7 @@ export { WaitlistForm }
 
 export default function Hero() {
   return (
-    <section style={{ maxWidth: 1280, margin: '0 auto', padding: '208px 24px 128px' }}>
+    <section className="hero-section" style={{ maxWidth: 1280, margin: '0 auto', padding: '208px 24px 128px' }}>
       <div className="hero-grid" style={{
         display: 'grid', gridTemplateColumns: '7fr 5fr', gap: 48, alignItems: 'center',
       }}>
@@ -226,6 +226,12 @@ export default function Hero() {
       <style>{`
         @media (max-width: 1100px) {
           .hero-dashboard { width: 340px !important; padding: 24px !important; border-radius: 32px !important; }
+        }
+        @media (max-width: 900px) {
+          section.hero-section { padding: 120px 24px 64px !important; }
+        }
+        @media (max-width: 640px) {
+          section.hero-section { padding: 100px 20px 48px !important; }
         }
         @media (max-width: 900px) {
           .hero-grid {

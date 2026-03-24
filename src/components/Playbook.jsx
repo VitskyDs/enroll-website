@@ -1,6 +1,6 @@
 const steps = [
   {
-    title: 'Multi-Tiered Tiers',
+    title: 'Tiered Loyalty',
     desc: 'Move beyond "10th cup free". Reward high-frequency customers with elite perks and exclusive early access.',
   },
   {
@@ -106,16 +106,18 @@ export default function Playbook() {
         @media (max-width: 900px) {
           .playbook-grid {
             grid-template-columns: 1fr !important;
-            gap: 48px !important;
+            gap: 40px !important;
+            padding: 0 !important;
+          }
+          .playbook-images {
+            display: none !important;
           }
           .playbook-grid h2 {
             font-size: 32px !important;
             line-height: 36px !important;
           }
-        }
-        @media (max-width: 640px) {
-          .playbook-images {
-            grid-template-columns: 1fr 1fr !important;
+          #how-it-works {
+            padding: 64px 24px !important;
           }
         }
       `}</style>
