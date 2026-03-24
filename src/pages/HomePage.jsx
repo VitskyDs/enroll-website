@@ -27,16 +27,16 @@ export default function HomePage() {
         <style>{`
           @media (max-width: 900px) {
             .home-content-section {
-              padding: 64px 48px !important;
-              gap: 64px !important;
+              padding: 64px 32px !important;
+              gap: 56px !important;
               border-radius: 32px !important;
             }
           }
           @media (max-width: 640px) {
             .home-content-section {
-              padding: 48px 20px !important;
+              padding: 48px 0 !important;
               gap: 48px !important;
-              border-radius: 24px !important;
+              border-radius: 20px !important;
             }
           }
         `}</style>

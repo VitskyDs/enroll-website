@@ -48,10 +48,10 @@ export default function FinalCTA() {
           }
         }
         @media (max-width: 640px) {
-          #final-cta { padding: 0 12px !important; }
+          #final-cta { padding: 0 !important; }
           .cta-inner {
-            padding: 32px 20px 40px !important;
-            border-radius: 24px !important;
+            padding: 40px 24px 48px !important;
+            border-radius: 20px !important;
           }
           .cta-heading {
             font-size: 28px !important;
@@ -60,7 +60,11 @@ export default function FinalCTA() {
           .waitlist-form {
             flex-direction: column !important;
           }
-          .waitlist-form input,
+          .waitlist-form input {
+            flex: none !important;
+            height: 56px !important;
+            width: 100% !important;
+          }
           .waitlist-form button {
             width: 100% !important;
           }
