@@ -34,7 +34,7 @@ export default function HomePage() {
           }
           @media (max-width: 640px) {
             .home-content-section {
-              padding: 48px 0 !important;
+              padding: 48px 16px !important;
               gap: 48px !important;
               border-radius: 20px !important;
             }
