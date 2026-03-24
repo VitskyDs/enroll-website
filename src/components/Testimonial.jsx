@@ -1,8 +1,8 @@
 export default function Testimonial() {
   return (
-    <section style={{ background: '#fff', maxWidth: 1280 }}>
+    <section style={{ width: '100%' }}>
       <div style={{
-        background: '#ecf5fc', borderRadius: 48, padding: '96px 48px',
+        background: '#ecf5fc', borderRadius: 48, padding: '96px',
         display: 'flex', flexDirection: 'column', alignItems: 'center'
       }} className="testimonial-card">
         {/* Avatar */}

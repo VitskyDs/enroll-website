@@ -17,8 +17,8 @@ export default function HomePage() {
         <Playbook />
         <BentoFeatures />
         <div className="home-content-section" style={{
-          background: '#fff', borderRadius: 48, padding: '96px 96px',
-          display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 96
+          background: '#fff', borderRadius: 64, padding: '32px 24px',
+          display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 32
         }}>
           <Testimonial />
           <FinalCTA />
@@ -27,16 +27,16 @@ export default function HomePage() {
         <style>{`
           @media (max-width: 900px) {
             .home-content-section {
-              padding: 64px 32px !important;
-              gap: 56px !important;
-              border-radius: 32px !important;
+              padding: 20px 16px !important;
+              gap: 20px !important;
+              border-radius: 40px !important;
             }
           }
           @media (max-width: 640px) {
             .home-content-section {
-              padding: 48px 16px !important;
-              gap: 48px !important;
-              border-radius: 20px !important;
+              padding: 16px 12px !important;
+              gap: 16px !important;
+              border-radius: 28px !important;
             }
           }
         `}</style>

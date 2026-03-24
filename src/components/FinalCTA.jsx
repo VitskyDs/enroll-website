@@ -2,9 +2,7 @@ import { WaitlistForm } from './Hero'
 
 export default function FinalCTA() {
   return (
-    <section id="final-cta" style={{
-      maxWidth: 1280, margin: '0 auto', padding: '0 24px', width: '100%',
-    }}>
+    <section id="final-cta" style={{ width: '100%' }}>
       <div style={{
         background: '#61001d',
         backgroundImage: 'linear-gradient(163deg, #61001d 0%, #811b32 100%)',
@@ -33,9 +31,8 @@ export default function FinalCTA() {
 
       <style>{`
         @media (max-width: 900px) {
-          #final-cta { padding: 0 16px !important; }
           .cta-inner {
-            padding: 48px 28px 56px !important;
+            padding: 48px 32px 56px !important;
             border-radius: 28px !important;
           }
           .cta-heading {
@@ -48,7 +45,6 @@ export default function FinalCTA() {
           }
         }
         @media (max-width: 640px) {
-          #final-cta { padding: 0 !important; }
           .cta-inner {
             padding: 40px 24px 48px !important;
             border-radius: 20px !important;
