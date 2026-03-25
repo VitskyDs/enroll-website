@@ -1,3 +1,5 @@
+import { useEffect, useRef } from 'react'
+
 const steps = [
   {
     title: 'Tiered Loyalty',
@@ -14,6 +16,19 @@ const steps = [
 ]
 
 export default function Playbook() {
+  const imagesRef = useRef(null)
+
+  useEffect(() => {
+    const el = imagesRef.current
+    if (!el) return
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { el.classList.add('playbook-images--visible'); observer.disconnect() } },
+      { threshold: 0.15 }
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <section id="how-it-works" style={{
       background: '#fff', padding: '128px 24px',
@@ -23,7 +38,7 @@ export default function Playbook() {
         maxWidth: 1280, margin: '0 auto',
       }}>
         {/* Left — Image grid */}
-        <div className="playbook-images" style={{
+        <div ref={imagesRef} className="playbook-images" style={{
           display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16,
         }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 16, paddingBottom: 48 }}>
@@ -103,6 +118,15 @@ export default function Playbook() {
       </div>
 
       <style>{`
+        .playbook-images > div > * {
+          opacity: 0;
+          transform: translateY(28px);
+          transition: opacity 0.65s ease, transform 0.65s ease;
+        }
+        .playbook-images--visible > div:first-child > *:nth-child(1) { opacity: 1; transform: none; transition-delay: 0s; }
+        .playbook-images--visible > div:first-child > *:nth-child(2) { opacity: 1; transform: none; transition-delay: 0.15s; }
+        .playbook-images--visible > div:last-child  > *:nth-child(1) { opacity: 1; transform: none; transition-delay: 0.08s; }
+        .playbook-images--visible > div:last-child  > *:nth-child(2) { opacity: 1; transform: none; transition-delay: 0.22s; }
         @media (max-width: 900px) {
           .playbook-grid {
             grid-template-columns: 1fr !important;

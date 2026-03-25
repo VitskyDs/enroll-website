@@ -1,4 +1,19 @@
+import { useEffect, useRef } from 'react'
+
 export default function BentoFeatures() {
+  const birthdayRef = useRef(null)
+
+  useEffect(() => {
+    const el = birthdayRef.current
+    if (!el) return
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { el.classList.add('birthday-card--visible'); observer.disconnect() } },
+      { threshold: 0.4 }
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <section className="bento-section" style={{ background: '#f4faff', padding: '96px 24px' }}>
       <div style={{ maxWidth: 1280, margin: '0 auto' }}>
@@ -163,7 +178,7 @@ export default function BentoFeatures() {
                   position: 'absolute', inset: '-16px -16px 16px 16px',
                   background: '#e6eff6', borderRadius: 16,
                 }} />
-                <div style={{
+                <div ref={birthdayRef} className="birthday-card" style={{
                   background: '#fff', borderRadius: 16, padding: 25,
                   border: '1px solid rgba(221,192,193,0.1)',
                   boxShadow: '0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1)',
@@ -223,6 +238,15 @@ export default function BentoFeatures() {
       </div>
 
       <style>{`
+        .birthday-card {
+          opacity: 0;
+          transform: scale(0.88) translateY(12px);
+          transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .birthday-card--visible {
+          opacity: 1;
+          transform: scale(1) translateY(0);
+        }
         @media (max-width: 900px) {
           .bento-section { padding: 64px 20px !important; }
           .bento-grid {

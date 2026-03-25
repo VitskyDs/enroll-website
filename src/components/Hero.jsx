@@ -227,6 +227,13 @@ export default function Hero() {
         @media (max-width: 1100px) {
           .hero-dashboard { width: 340px !important; padding: 24px !important; border-radius: 32px !important; }
         }
+        .hero-dashboard {
+          animation: heroCardSlide 1s cubic-bezier(0.22, 1, 0.36, 1) 0.35s both;
+        }
+        @keyframes heroCardSlide {
+          from { opacity: 0; transform: translateX(40px) translateY(12px); }
+          to   { opacity: 1; transform: translateX(0) translateY(0); }
+        }
         @media (max-width: 900px) {
           section.hero-section { padding: 120px 24px 64px !important; }
         }
