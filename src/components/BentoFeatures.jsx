@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react'
 
 export default function BentoFeatures() {
   const birthdayRef = useRef(null)
+  const stampRowRef = useRef(null)
 
   useEffect(() => {
     const el = birthdayRef.current
@@ -9,6 +10,17 @@ export default function BentoFeatures() {
     const observer = new IntersectionObserver(
       ([entry]) => { if (entry.isIntersecting) { el.classList.add('birthday-card--visible'); observer.disconnect() } },
       { threshold: 0.4 }
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
+
+  useEffect(() => {
+    const el = stampRowRef.current
+    if (!el) return
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { el.classList.add('stamp-row--visible'); observer.disconnect() } },
+      { threshold: 0.5 }
     )
     observer.observe(el)
     return () => observer.disconnect()
@@ -82,14 +94,18 @@ export default function BentoFeatures() {
                     fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: 16, color: '#61001d',
                   }}>8/10</span>
                 </div>
-                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <div ref={stampRowRef} className="stamp-row" style={{ display: 'flex', justifyContent: 'space-between' }}>
                   {Array.from({ length: 10 }, (_, i) => (
-                    <div key={i} style={{
-                      width: 23, height: 32, borderRadius: 9999,
-                      background: i < 8 ? '#61001d' : '#e0e9f0',
-                      border: i >= 8 ? '2px dashed #ddc0c1' : 'none',
-                      display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    }}>
+                    <div key={i}
+                      className={i < 8 ? 'punch-fill' : ''}
+                      style={{
+                        width: 23, height: 32, borderRadius: 9999,
+                        background: i < 8 ? '#61001d' : '#e0e9f0',
+                        border: i >= 8 ? '2px dashed #ddc0c1' : 'none',
+                        display: 'flex', alignItems: 'center', justifyContent: 'center',
+                        '--punch-delay': `${i * 0.07}s`,
+                      }}
+                    >
                       {i < 8 && (
                         <svg width="9" height="9" viewBox="0 0 12 12" fill="none">
                           <path d="M3 6l3 3 4-4" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -238,6 +254,13 @@ export default function BentoFeatures() {
       </div>
 
       <style>{`
+        .punch-fill {
+          transform: scale(0);
+          transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) var(--punch-delay, 0s);
+        }
+        .stamp-row--visible .punch-fill {
+          transform: scale(1);
+        }
         .birthday-card {
           opacity: 0;
           transform: scale(0.88) translateY(12px);
