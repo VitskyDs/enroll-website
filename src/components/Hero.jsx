@@ -138,13 +138,13 @@ export default function Hero() {
             src="/hero-coffee.jpg"
             alt="Coffee shop"
             style={{
-              width: 319, borderRadius: 32, position: 'absolute', left: 0, top: 80,
+              width: 319, borderRadius: 32, position: 'absolute', left: 0, top: 0,
             }}
           />
 
           {/* Loyalty Dashboard Card */}
           <div className="hero-dashboard" style={{
-            position: 'absolute', right: 0, top: 73,
+            position: 'absolute', right: 0, top: 0,
             width: 400, background: '#fff', borderRadius: 48,
             padding: 33, boxShadow: '0 0 8px rgba(0,0,0,0.25), 0 20px 40px rgba(39,24,9,0.06)',
             border: '1px solid rgba(224,191,191,0.1)',
