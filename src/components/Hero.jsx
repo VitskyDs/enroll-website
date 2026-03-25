@@ -231,7 +231,7 @@ export default function Hero() {
           animation: heroCardSlide 1s cubic-bezier(0.22, 1, 0.36, 1) 0.35s both;
         }
         @keyframes heroCardSlide {
-          from { opacity: 0; transform: translateY(340px); }
+          from { opacity: 0; transform: translateY(280px); }
           to   { opacity: 1; transform: translateY(180px); }
         }
         @media (max-width: 900px) {
