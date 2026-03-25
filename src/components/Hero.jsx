@@ -138,7 +138,7 @@ export default function Hero() {
             src="/hero-coffee.jpg"
             alt="Coffee shop"
             style={{
-              width: 319, borderRadius: 32, position: 'absolute', left: 0, top: 0,
+              width: 319, borderRadius: 32, position: 'absolute', left: 0, top: 80,
             }}
           />
 
@@ -231,8 +231,8 @@ export default function Hero() {
           animation: heroCardSlide 1s cubic-bezier(0.22, 1, 0.36, 1) 0.35s both;
         }
         @keyframes heroCardSlide {
-          from { opacity: 0; transform: translateX(40px) translateY(12px); }
-          to   { opacity: 1; transform: translateX(0) translateY(0); }
+          from { opacity: 0; transform: translateX(40px) translateY(-20px); }
+          to   { opacity: 1; transform: translateX(0) translateY(80px); }
         }
         @media (max-width: 900px) {
           section.hero-section { padding: 120px 24px 64px !important; }
