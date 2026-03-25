@@ -231,8 +231,8 @@ export default function Hero() {
           animation: heroCardSlide 1s cubic-bezier(0.22, 1, 0.36, 1) 0.35s both;
         }
         @keyframes heroCardSlide {
-          from { opacity: 0; transform: translateX(40px) translateY(-20px); }
-          to   { opacity: 1; transform: translateX(0) translateY(80px); }
+          from { opacity: 0; transform: translateY(340px); }
+          to   { opacity: 1; transform: translateY(130px); }
         }
         @media (max-width: 900px) {
           section.hero-section { padding: 120px 24px 64px !important; }
