@@ -232,7 +232,7 @@ export default function Hero() {
         }
         @keyframes heroCardSlide {
           from { opacity: 0; transform: translateY(340px); }
-          to   { opacity: 1; transform: translateY(130px); }
+          to   { opacity: 1; transform: translateY(180px); }
         }
         @media (max-width: 900px) {
           section.hero-section { padding: 120px 24px 64px !important; }
