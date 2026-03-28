@@ -31,12 +31,11 @@ export default function Navbar() {
     fontSize: 24, color: '#61001d', letterSpacing: '-1.2px',
   }
 
-  const linkStyle = (active) => ({
+  const linkStyle = () => ({
     fontFamily: 'var(--font-heading)', fontWeight: 600, fontSize: 16,
-    color: active ? '#811b32' : '#475569', letterSpacing: '-0.4px',
+    color: '#475569', letterSpacing: '-0.4px',
     marginLeft: 32, cursor: 'pointer',
-    borderBottom: active ? '2px solid #811b32' : '2px solid transparent',
-    paddingBottom: 6,
+    textDecoration: 'none',
   })
 
   const ctaBtnStyle = {
