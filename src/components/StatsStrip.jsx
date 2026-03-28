@@ -1,24 +1,65 @@
+import { useEffect, useRef, useState } from 'react'
+
 const stats = [
   {
     number: '54M',
+    prefix: '', suffix: 'M', value: 54, decimals: 0,
     label: 'Active Members',
     description: 'Starbucks Rewards is the most successful retail loyalty program in history.',
   },
   {
     number: '40%',
+    prefix: '', suffix: '%', value: 40, decimals: 0,
     label: 'Revenue Attribution',
     description: 'Nearly half of all transactions are driven directly by loyalty incentives.',
   },
   {
     number: '$3.6B',
+    prefix: '$', suffix: 'B', value: 3.6, decimals: 1,
     label: 'Pre-loaded Cards',
     description: 'Customers treat their apps like bank accounts, ensuring repeat visits.',
   },
 ]
 
+function CountUp({ prefix, suffix, value, decimals, started }) {
+  const [current, setCurrent] = useState(0)
+  const rafRef = useRef(null)
+
+  useEffect(() => {
+    if (!started) return
+    const duration = 1600
+    const start = performance.now()
+    function tick(now) {
+      const elapsed = now - start
+      const progress = Math.min(elapsed / duration, 1)
+      // ease out cubic
+      const eased = 1 - Math.pow(1 - progress, 3)
+      setCurrent(eased * value)
+      if (progress < 1) rafRef.current = requestAnimationFrame(tick)
+    }
+    rafRef.current = requestAnimationFrame(tick)
+    return () => cancelAnimationFrame(rafRef.current)
+  }, [started, value])
+
+  const display = decimals > 0 ? current.toFixed(decimals) : Math.round(current)
+  return <>{prefix}{display}{suffix}</>
+}
+
 export default function StatsStrip() {
+  const [started, setStarted] = useState(false)
+  const sectionRef = useRef(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { setStarted(true); observer.disconnect() } },
+      { threshold: 0.3 }
+    )
+    if (sectionRef.current) observer.observe(sectionRef.current)
+    return () => observer.disconnect()
+  }, [])
+
   return (
-    <section id="why-enroll" style={{ background: '#f4faff', padding: '80px 24px' }}>
+    <section id="why-enroll" ref={sectionRef} style={{ background: '#f4faff', padding: '80px 24px' }}>
       <div style={{ maxWidth: 1280, margin: '0 auto' }}>
         <div className="stats-header" style={{ marginBottom: 64 }}>
           <div style={{
@@ -42,7 +83,9 @@ export default function StatsStrip() {
               <div style={{
                 fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 48,
                 color: '#61001d', lineHeight: '48px',
-              }}>{s.number}</div>
+              }}>
+                <CountUp prefix={s.prefix} suffix={s.suffix} value={s.value} decimals={s.decimals} started={started} />
+              </div>
               <div style={{
                 fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: 16,
                 color: '#564143', marginTop: 8, lineHeight: '24px',
