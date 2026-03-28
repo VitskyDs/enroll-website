@@ -1,28 +1,28 @@
-import Navbar from '../components/Navbar'
-import Hero from '../components/Hero'
-import StatsStrip from '../components/StatsStrip'
-import Playbook from '../components/Playbook'
-import BentoFeatures from '../components/BentoFeatures'
-import Testimonial from '../components/Testimonial'
-import FinalCTA from '../components/FinalCTA'
-import Footer from '../components/Footer'
+import HeNavbar from '../components/he/HeNavbar'
+import HeHero from '../components/he/HeHero'
+import HeStatsStrip from '../components/he/HeStatsStrip'
+import HePlaybook from '../components/he/HePlaybook'
+import HeBentoFeatures from '../components/he/HeBentoFeatures'
+import HeTestimonial from '../components/he/HeTestimonial'
+import HeFinalCTA from '../components/he/HeFinalCTA'
+import HeFooter from '../components/he/HeFooter'
 
-export default function HomePage() {
+export default function HeHomePage() {
   return (
-    <>
-      <Navbar />
+    <div dir="rtl" className="he-page">
+      <HeNavbar />
       <main>
-        <Hero />
-        <StatsStrip />
-        <Playbook />
-        <BentoFeatures />
+        <HeHero />
+        <HeStatsStrip />
+        <HePlaybook />
+        <HeBentoFeatures />
         <div className="home-content-section" style={{
           background: '#fff', borderRadius: 64, padding: '32px 24px',
           display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 32,
           maxWidth: 1280, margin: '0 auto',
         }}>
-          <Testimonial />
-          <FinalCTA />
+          <HeTestimonial />
+          <HeFinalCTA />
         </div>
 
         <style>{`
@@ -43,7 +43,7 @@ export default function HomePage() {
         `}</style>
 
       </main>
-      <Footer />
-    </>
+      <HeFooter />
+    </div>
   )
 }

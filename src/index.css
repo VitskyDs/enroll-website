@@ -29,3 +29,8 @@ a { text-decoration: none; color: inherit; }
   --font-heading:   'Plus Jakarta Sans', sans-serif;
   --font-body:      'Inter', sans-serif;
 }
+
+.he-page {
+  --font-heading: 'Assistant', sans-serif;
+  --font-body:    'Heebo', sans-serif;
+}
