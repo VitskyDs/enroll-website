@@ -70,7 +70,7 @@ export default function Navbar() {
           </a>
 
           <div className="nav-links-desktop" style={{ display: 'flex', alignItems: 'center' }}>
-            <a href="/#how-it-works" style={linkStyle(true)}>How It Works</a>
+            <a href="/#how-it-works" style={linkStyle(false)}>How It Works</a>
             <a href="/#why-enroll" style={linkStyle(false)}>Why Enroll</a>
           </div>
 

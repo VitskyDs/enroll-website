@@ -70,7 +70,7 @@ export default function HeNavbar() {
           </a>
 
           <div className="nav-links-desktop" style={{ display: 'flex', alignItems: 'center' }}>
-            <a href="/he#how-it-works" style={linkStyle(true)}>איך זה עובד</a>
+            <a href="/he#how-it-works" style={linkStyle(false)}>איך זה עובד</a>
             <a href="/he#why-enroll" style={linkStyle(false)}>למה אנרול</a>
           </div>
 
