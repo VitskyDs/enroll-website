@@ -66,12 +66,12 @@ export default function HeNavbar() {
         <div style={innerStyle}>
           <a href="#" style={logoStyle}>
             <img src="/logo-mark.svg" alt="Enroll" style={{ width: 32, height: 32 }} />
-            Enroll
+            אנרול
           </a>
 
           <div className="nav-links-desktop" style={{ display: 'flex', alignItems: 'center' }}>
             <a href="#how-it-works" style={linkStyle(true)}>איך זה עובד</a>
-            <a href="#why-enroll" style={linkStyle(false)}>למה Enroll</a>
+            <a href="#why-enroll" style={linkStyle(false)}>למה אנרול</a>
             <a href="#pricing" style={linkStyle(false)}>תמחור</a>
           </div>
 
@@ -82,7 +82,7 @@ export default function HeNavbar() {
             onMouseEnter={e => e.target.style.background = '#6b1529'}
             onMouseLeave={e => e.target.style.background = '#811b32'}
           >
-            הצטרף לרשימת ההמתנה
+            הצטרפות לרשימת המתנה
           </button>
 
           <button
@@ -112,7 +112,7 @@ export default function HeNavbar() {
       {menuOpen && (
         <div style={mobileMenuStyle} onClick={() => setMenuOpen(false)}>
           <a href="#how-it-works" style={mobileLinkStyle}>איך זה עובד</a>
-          <a href="#why-enroll" style={mobileLinkStyle}>למה Enroll</a>
+          <a href="#why-enroll" style={mobileLinkStyle}>למה אנרול</a>
           <a href="#pricing" style={mobileLinkStyle}>תמחור</a>
           <button
             style={{ ...ctaBtnStyle, fontSize: 16, padding: '14px 32px' }}
@@ -121,7 +121,7 @@ export default function HeNavbar() {
               document.getElementById('final-cta')?.scrollIntoView({ behavior: 'smooth' })
             }}
           >
-            הצטרף לרשימת ההמתנה
+            הצטרפות לרשימת המתנה
           </button>
         </div>
       )}

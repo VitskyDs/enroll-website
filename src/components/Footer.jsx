@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export default function Footer() {
   return (
     <footer style={{
@@ -19,15 +21,15 @@ export default function Footer() {
         </div>
 
         <div className="footer-links" style={{ display: 'flex', gap: 32 }}>
-          <a href="#" style={{
-            fontFamily: 'var(--font-body)', fontSize: 14, color: '#64748b', lineHeight: '20px',
-          }}>Privacy Policy</a>
-          <a href="#" style={{
-            fontFamily: 'var(--font-body)', fontSize: 14, color: '#64748b', lineHeight: '20px',
-          }}>Terms of Service</a>
-          <a href="#" style={{
-            fontFamily: 'var(--font-body)', fontSize: 14, color: '#64748b', lineHeight: '20px',
-          }}>Contact Us</a>
+          <Link to="/legal#privacy-policy" style={{
+            fontFamily: 'var(--font-body)', fontSize: 14, color: '#64748b', lineHeight: '20px', textDecoration: 'none',
+          }}>Privacy Policy</Link>
+          <Link to="/legal#terms-of-service" style={{
+            fontFamily: 'var(--font-body)', fontSize: 14, color: '#64748b', lineHeight: '20px', textDecoration: 'none',
+          }}>Terms of Service</Link>
+          <Link to="/contact" style={{
+            fontFamily: 'var(--font-body)', fontSize: 14, color: '#64748b', lineHeight: '20px', textDecoration: 'none',
+          }}>Contact Us</Link>
         </div>
       </div>
 

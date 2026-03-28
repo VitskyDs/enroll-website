@@ -14,14 +14,14 @@ export default function HeFinalCTA() {
         <h2 style={{
           fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 48,
           color: '#fff', textAlign: 'center', lineHeight: '48px', margin: 0,
-        }} className="cta-heading">מוכן לקחת בעלות על הקהל שלך?</h2>
+        }} className="cta-heading">מוכנים לקחת בעלות על הקהל שלכם?</h2>
 
         <p style={{
           fontFamily: 'var(--font-body)', fontSize: 20, color: 'rgba(255,255,255,0.8)',
           textAlign: 'center', lineHeight: '28px', marginTop: 32, maxWidth: 576,
         }}>
-          הצטרף לרשימת ההמתנה היום וקבל את 3 החודשים הראשונים
-          של Enroll נאמנות בחינם.
+          הצטרפו לרשימת ההמתנה וקבלו 3 חודשים ראשונים
+          של אנרול נאמנות בחינם.
         </p>
 
         <div style={{ marginTop: 32 }}>

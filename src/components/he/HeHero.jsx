@@ -59,13 +59,13 @@ function HeWaitlistForm({ dark = false }) {
           transition: 'opacity 0.15s',
           opacity: status === 'submitting' ? 0.7 : 1,
         }}>
-          {status === 'submitting' ? 'שולח...' : 'הצטרף לרשימת ההמתנה'}
+          {status === 'submitting' ? 'שולח...' : 'הצטרפות לרשימת המתנה'}
         </button>
         <input
           type="email"
           value={email}
           onChange={e => setEmail(e.target.value)}
-          placeholder='הזן את כתובת הדוא"ל של בית הקפה'
+          placeholder='כתובת המייל שלך'
           required
           style={{
             flex: 1, height: 56, padding: '0 24px',
@@ -104,16 +104,16 @@ export default function HeHero() {
             lineHeight: 1.2, letterSpacing: '-1.8px', margin: 0,
           }}>
             <span style={{ color: '#141d21' }}>הלקוחות הקבועים שלך<br />ראויים לנאמנות<br /></span>
-            <span style={{ color: '#811b32' }}>טובה כמו של סטארבקס.</span>
+            <span style={{ color: '#811b32' }}>ברמה של הרשתות הגדולות.</span>
           </h1>
 
           <p style={{
             fontFamily: 'var(--font-body)', fontSize: 20, lineHeight: '28px',
             color: '#576065', marginTop: 24, maxWidth: 576,
           }}>
-            בתי קפה עצמאיים הם נשמת השכונה.
-            אנחנו נותנים לך טכנולוגיה ברמה ארגונית כדי לתגמל
-            את הקהילה שלך — ללא עלויות תאגידיות.
+            בתי קפה עצמאיים הם הלב של השכונה.
+            אנחנו נותנים לך כלים מתקדמים כדי לתגמל
+            את הקהילה שלך — בלי עלויות כבדות.
           </p>
 
           <div style={{ marginTop: 32, paddingTop: 16 }}>
@@ -128,7 +128,7 @@ export default function HeHero() {
               <path d="M3.5 6l2 2 3-3" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
             <span style={{ fontFamily: 'var(--font-body)', fontSize: 14, color: '#564143' }}>
-              ללא כרטיס אשראי. ללא ציוד נוסף. 100% דיגיטלי.
+              ללא כרטיס אשראי • ללא ציוד נוסף • 100% דיגיטלי
             </span>
           </div>
         </div>
@@ -168,15 +168,15 @@ export default function HeHero() {
                 fontFamily: 'var(--font-body)', fontWeight: 700, fontSize: 16, color: '#7b001f',
               }}>שר</div>
               <div>
-                <div style={{ fontWeight: 700, fontSize: 18, color: '#271809', fontFamily: 'var(--font-body)' }}>ההתקדמות של שרה</div>
-                <div style={{ fontWeight: 700, fontSize: 12, color: '#594141', letterSpacing: '1.2px', textTransform: 'uppercase', fontFamily: 'var(--font-body)' }}>חבר מועדון</div>
+                <div style={{ fontWeight: 700, fontSize: 18, color: '#271809', fontFamily: 'var(--font-body)' }}>התקדמות הלקוחה שרה</div>
+                <div style={{ fontWeight: 700, fontSize: 12, color: '#594141', letterSpacing: '1.2px', textTransform: 'uppercase', fontFamily: 'var(--font-body)' }}>חברת מועדון</div>
               </div>
             </div>
 
             {/* Stamp progress */}
             <div style={{ marginBottom: 24 }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 8 }}>
-                <span style={{ fontWeight: 700, fontSize: 12, color: '#ac3400', fontFamily: 'var(--font-body)' }}>!עוד 3</span>
+                <span style={{ fontWeight: 700, fontSize: 12, color: '#ac3400', fontFamily: 'var(--font-body)' }}>עוד 3 ביקורים!</span>
                 <span style={{ fontWeight: 700, fontSize: 14, color: '#271809', fontFamily: 'var(--font-body)' }}>7/10 חותמות</span>
               </div>
               <div style={{
@@ -202,14 +202,14 @@ export default function HeHero() {
               </svg>
               <div>
                 <div style={{ fontWeight: 700, fontSize: 14, color: '#154413', fontFamily: 'var(--font-body)' }}>מתנת יום הולדת פעילה</div>
-                <div style={{ fontSize: 12, color: 'rgba(21,68,19,0.7)', fontFamily: 'var(--font-body)' }}>בתוקף עד 24 באוק׳</div>
+                <div style={{ fontSize: 12, color: 'rgba(21,68,19,0.7)', fontFamily: 'var(--font-body)' }}>בתוקף עד 24 באוקטובר</div>
               </div>
             </div>
 
             {/* Stats row */}
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
               <div style={{ border: '1px solid #f2f2f2', borderRadius: 16, padding: 12, textAlign: 'center' }}>
-                <div style={{ fontWeight: 900, fontSize: 10, color: '#594141', textTransform: 'uppercase', letterSpacing: '-0.5px', fontFamily: 'var(--font-body)' }}>ביקורים סה״כ</div>
+                <div style={{ fontWeight: 900, fontSize: 10, color: '#594141', textTransform: 'uppercase', letterSpacing: '-0.5px', fontFamily: 'var(--font-body)' }}>סה״כ ביקורים</div>
                 <div style={{ fontWeight: 900, fontSize: 24, color: '#7b001f', fontFamily: 'var(--font-body)', marginTop: 4 }}>42</div>
               </div>
               <div style={{ border: '1px solid #f2f2f2', borderRadius: 16, padding: '12px 12px 16px', textAlign: 'center' }}>

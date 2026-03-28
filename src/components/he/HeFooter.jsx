@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export default function HeFooter() {
   return (
     <footer style={{
@@ -12,22 +14,22 @@ export default function HeFooter() {
           <div style={{
             fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: 20,
             color: '#61001d', marginBottom: 16, lineHeight: '28px',
-          }}>Enroll</div>
+          }}>אנרול</div>
           <div style={{
             fontFamily: 'var(--font-body)', fontSize: 14, color: '#64748b', lineHeight: '20px',
-          }}>© 2026 Enroll. כל הזכויות שמורות.</div>
+          }}>© 2026 אנרול. כל הזכויות שמורות.</div>
         </div>
 
         <div className="footer-links" style={{ display: 'flex', gap: 32 }}>
-          <a href="#" style={{
-            fontFamily: 'var(--font-body)', fontSize: 14, color: '#64748b', lineHeight: '20px',
-          }}>מדיניות פרטיות</a>
-          <a href="#" style={{
-            fontFamily: 'var(--font-body)', fontSize: 14, color: '#64748b', lineHeight: '20px',
-          }}>תנאי שימוש</a>
-          <a href="#" style={{
-            fontFamily: 'var(--font-body)', fontSize: 14, color: '#64748b', lineHeight: '20px',
-          }}>צור קשר</a>
+          <Link to="/he/legal#privacy-policy" style={{
+            fontFamily: 'var(--font-body)', fontSize: 14, color: '#64748b', lineHeight: '20px', textDecoration: 'none',
+          }}>מדיניות פרטיות</Link>
+          <Link to="/he/legal#terms-of-service" style={{
+            fontFamily: 'var(--font-body)', fontSize: 14, color: '#64748b', lineHeight: '20px', textDecoration: 'none',
+          }}>תנאי שימוש</Link>
+          <Link to="/he/contact" style={{
+            fontFamily: 'var(--font-body)', fontSize: 14, color: '#64748b', lineHeight: '20px', textDecoration: 'none',
+          }}>צור קשר</Link>
         </div>
       </div>
 

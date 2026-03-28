@@ -1,9 +1,9 @@
 import HeNavbar from '../components/he/HeNavbar'
 import HeHero from '../components/he/HeHero'
 import HeStatsStrip from '../components/he/HeStatsStrip'
+import HeProblemSolution from '../components/he/HeProblemSolution'
 import HePlaybook from '../components/he/HePlaybook'
 import HeBentoFeatures from '../components/he/HeBentoFeatures'
-import HeTestimonial from '../components/he/HeTestimonial'
 import HeFinalCTA from '../components/he/HeFinalCTA'
 import HeFooter from '../components/he/HeFooter'
 
@@ -13,6 +13,7 @@ export default function HeHomePage() {
       <HeNavbar />
       <main>
         <HeHero />
+        <HeProblemSolution />
         <HeStatsStrip />
         <HePlaybook />
         <HeBentoFeatures />
@@ -21,7 +22,6 @@ export default function HeHomePage() {
           display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 32,
           maxWidth: 1280, margin: '0 auto',
         }}>
-          <HeTestimonial />
           <HeFinalCTA />
         </div>
 

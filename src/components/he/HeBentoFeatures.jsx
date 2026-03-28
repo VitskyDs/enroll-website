@@ -34,11 +34,11 @@ export default function HeBentoFeatures() {
           <h2 style={{
             fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: 36,
             color: '#141d21', lineHeight: '40px', letterSpacing: '-0.9px', margin: 0,
-          }}>טכנולוגיה ארגונית לאגדות מקומיות.</h2>
+          }}>טכנולוגיה מתקדמת לעסקים מקומיים</h2>
           <p style={{
             fontFamily: 'var(--font-body)', fontSize: 16, color: '#576065',
             lineHeight: '24px', marginTop: 16,
-          }}>ריכזנו מיליוני דולרים של מחקר נאמנות לאפליקציה פשוטה לדלפק שלך.</p>
+          }}>ריכזנו ידע וניסיון של שנים לפלטפורמה פשוטה שעובדת אצלך בקופה.</p>
         </div>
 
         {/* Bento Grid */}
@@ -65,14 +65,13 @@ export default function HeBentoFeatures() {
               <h3 style={{
                 fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: 24,
                 color: '#141d21', marginTop: 24, lineHeight: '32px',
-              }}>כרטיסי חותמות דיגיטליים</h3>
+              }}>כרטיסיות דיגיטליות</h3>
               <p style={{
                 fontFamily: 'var(--font-body)', fontSize: 16, color: '#576065',
                 lineHeight: '26px', marginTop: 12,
               }}>
-                לא עוד כרטיסים אבודים מנייר. לקוחות סורקים
-                קוד QR פשוט בקופה. מהיר, היגייני
-                וידידותי לסביבה.
+                בלי כרטיסי נייר שנעלמים.
+                סריקת QR פשוטה בקופה — מהיר, נקי ונוח.
               </p>
             </div>
 
@@ -130,12 +129,12 @@ export default function HeBentoFeatures() {
               <h3 style={{
                 fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: 24,
                 color: '#fff', lineHeight: '32px', margin: 0,
-              }}>מנויים יומיים</h3>
+              }}>מועדון מנויים</h3>
               <p style={{
                 fontFamily: 'var(--font-body)', fontSize: 16, color: 'rgba(255,255,255,0.8)',
                 lineHeight: '24px', marginTop: 12,
               }}>
-                השק את מועדון הפרסים שלך ותגביר את ההכנסות החוזרות בכל חודש.
+                לקוחות מנויים מוציאים בממוצע 24% יותר מלקוח רגיל ומייצרים הכנסה חודשית קבועה לעסק.
               </p>
             </div>
 
@@ -145,11 +144,11 @@ export default function HeBentoFeatures() {
               <div style={{
                 fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: 12,
                 color: '#fff', textTransform: 'uppercase', letterSpacing: '1.2px', opacity: 0.6,
-              }}>נתון הצלחה</div>
+              }}>נתון לדוגמה</div>
               <div style={{
                 fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: 24,
                 color: '#fff', lineHeight: '32px',
-              }}>+24% הכנסה חודשית</div>
+              }}>+24% הוצאה ללקוח</div>
             </div>
           </div>
 
@@ -169,14 +168,14 @@ export default function HeBentoFeatures() {
             <h3 style={{
               fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: 24,
               color: '#141d21', marginTop: 24, lineHeight: '32px',
-            }}>תובנות קהל</h3>
+            }}>תובנות על הלקוחות</h3>
             <p style={{
               fontFamily: 'var(--font-body)', fontSize: 16, color: '#576065',
               lineHeight: '26px', marginTop: 12,
             }}>
-              הכר את הלקוחות הטובים ביותר שלך בשמם.
-              ראה מתי הם מבקרים, מה הם קונים
-              ולמה הם נשארים.
+              להכיר את הלקוחות הכי טובים שלך באמת.
+              לראות מתי הם מגיעים, מה הם קונים
+              ולמה הם חוזרים.
             </p>
           </div>
 
@@ -211,14 +210,14 @@ export default function HeBentoFeatures() {
                     </div>
                     <span style={{
                       fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: 14, color: '#141d21',
-                    }}>!יום הולדת שמח, אלכס</span>
+                    }}>🎉 יום הולדת שמח, אלכס!</span>
                   </div>
                   <p style={{
                     fontFamily: 'var(--font-body)', fontSize: 12, color: '#576065',
                     lineHeight: '16px', margin: 0,
                   }}>
-                    הפלט וויט האהוב עליך על חשבוננו
-                    היום. הקש לממש ב-Brick & Brew.
+                    הפלט וייט האהוב עליך עלינו היום.
+                    לחץ למימוש ב־Brick & Brew.
                   </p>
                   <div style={{
                     height: 8, borderRadius: 9999, background: '#811b32', marginTop: 16, width: '100%',
@@ -239,14 +238,13 @@ export default function HeBentoFeatures() {
               <h3 style={{
                 fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: 24,
                 color: '#141d21', marginTop: 24, lineHeight: '32px',
-              }}>קמפיינים בהודעות דחיפה</h3>
+              }}>הודעות חכמות</h3>
               <p style={{
                 fontFamily: 'var(--font-body)', fontSize: 16, color: '#576065',
                 lineHeight: '26px', marginTop: 12,
               }}>
-                החזר לקוחות אבודים עם הודעות "געגענו
-                אליך" אוטומטיות שנשלחות ישירות
-                לטלפון שלהם.
+                להחזיר לקוחות שלא הגיעו עם הודעות
+                אוטומטיות כמו "התגעגענו אליך".
               </p>
             </div>
           </div>

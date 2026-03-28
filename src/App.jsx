@@ -3,6 +3,10 @@ import HomePage from './pages/HomePage'
 import CoffeePage from './pages/CoffeePage'
 import CoffeeV2Page from './pages/CoffeeV2Page'
 import HeHomePage from './pages/HeHomePage'
+import ContactPage from './pages/ContactPage'
+import LegalPage from './pages/LegalPage'
+import HeContactPage from './pages/HeContactPage'
+import HeLegalPage from './pages/HeLegalPage'
 import NotFoundPage from './pages/NotFoundPage'
 import HeNotFoundPage from './pages/HeNotFoundPage'
 import './App.css'
@@ -14,6 +18,10 @@ export default function App() {
       <Route path="/coffee" element={<CoffeePage />} />
       <Route path="/coffee-v2" element={<CoffeeV2Page />} />
       <Route path="/he" element={<HeHomePage />} />
+      <Route path="/contact" element={<ContactPage />} />
+      <Route path="/legal" element={<LegalPage />} />
+      <Route path="/he/contact" element={<HeContactPage />} />
+      <Route path="/he/legal" element={<HeLegalPage />} />
       <Route path="/he/*" element={<HeNotFoundPage />} />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
