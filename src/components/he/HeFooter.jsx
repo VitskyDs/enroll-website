@@ -8,7 +8,7 @@ export default function HeFooter() {
     }}>
       <div className="footer-inner" style={{
         maxWidth: 1280, margin: '0 auto',
-        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+        display: 'flex', alignItems: 'center', justifyContent: 'flex-start', gap: 48,
       }}>
         <div>
           <div style={{

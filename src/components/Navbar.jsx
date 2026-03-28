@@ -64,21 +64,20 @@ export default function Navbar() {
     <>
       <nav style={navStyle}>
         <div style={innerStyle}>
-          <a href="#" style={logoStyle}>
+          <a href="/" style={logoStyle}>
             <img src="/logo-mark.svg" alt="Enroll" style={{ width: 32, height: 32 }} />
             Enroll
           </a>
 
           <div className="nav-links-desktop" style={{ display: 'flex', alignItems: 'center' }}>
-            <a href="#how-it-works" style={linkStyle(true)}>How It Works</a>
-            <a href="#why-enroll" style={linkStyle(false)}>Why Enroll</a>
-            <a href="#pricing" style={linkStyle(false)}>Pricing</a>
+            <a href="/#how-it-works" style={linkStyle(true)}>How It Works</a>
+            <a href="/#why-enroll" style={linkStyle(false)}>Why Enroll</a>
           </div>
 
           <button
             className="nav-cta-desktop"
             style={ctaBtnStyle}
-            onClick={() => document.getElementById('final-cta')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() => { window.location.href = '/#final-cta' }}
             onMouseEnter={e => e.target.style.background = '#6b1529'}
             onMouseLeave={e => e.target.style.background = '#811b32'}
           >
@@ -111,14 +110,13 @@ export default function Navbar() {
 
       {menuOpen && (
         <div style={mobileMenuStyle} onClick={() => setMenuOpen(false)}>
-          <a href="#how-it-works" style={mobileLinkStyle}>How It Works</a>
-          <a href="#why-enroll" style={mobileLinkStyle}>Why Enroll</a>
-          <a href="#pricing" style={mobileLinkStyle}>Pricing</a>
+          <a href="/#how-it-works" style={mobileLinkStyle}>How It Works</a>
+          <a href="/#why-enroll" style={mobileLinkStyle}>Why Enroll</a>
           <button
             style={{ ...ctaBtnStyle, fontSize: 16, padding: '14px 32px' }}
             onClick={() => {
               setMenuOpen(false)
-              document.getElementById('final-cta')?.scrollIntoView({ behavior: 'smooth' })
+              window.location.href = '/#final-cta'
             }}
           >
             Join the Waitlist

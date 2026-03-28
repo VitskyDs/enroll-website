@@ -48,19 +48,6 @@ function HeWaitlistForm({ dark = false }) {
       <form onSubmit={handleSubmit} className="waitlist-form" style={{
         display: 'flex', gap: dark ? 16 : 12, maxWidth: dark ? 504 : 512,
       }}>
-        <button type="submit" disabled={status === 'submitting'} style={{
-          height: 56, padding: '0 32px', borderRadius: 24,
-          background: dark ? '#fff' : '#811b32',
-          color: dark ? '#61001d' : '#fff',
-          border: 'none',
-          fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: 16,
-          cursor: 'pointer', whiteSpace: 'nowrap',
-          boxShadow: dark ? 'none' : '0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1)',
-          transition: 'opacity 0.15s',
-          opacity: status === 'submitting' ? 0.7 : 1,
-        }}>
-          {status === 'submitting' ? 'שולח...' : 'הצטרפות לרשימת המתנה'}
-        </button>
         <input
           type="email"
           value={email}
@@ -79,6 +66,19 @@ function HeWaitlistForm({ dark = false }) {
             textAlign: 'right',
           }}
         />
+        <button type="submit" disabled={status === 'submitting'} style={{
+          height: 56, padding: '0 32px', borderRadius: 24,
+          background: dark ? '#fff' : '#811b32',
+          color: dark ? '#61001d' : '#fff',
+          border: 'none',
+          fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: 16,
+          cursor: 'pointer', whiteSpace: 'nowrap',
+          boxShadow: dark ? 'none' : '0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1)',
+          transition: 'opacity 0.15s',
+          opacity: status === 'submitting' ? 0.7 : 1,
+        }}>
+          {status === 'submitting' ? 'שולח...' : 'הצטרפות לרשימת המתנה'}
+        </button>
       </form>
       {status === 'error' && (
         <p style={{ color: dark ? '#fca5a5' : '#dc2626', fontSize: 14, marginTop: 8, fontFamily: 'var(--font-body)' }}>

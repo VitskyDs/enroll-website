@@ -1,6 +1,6 @@
 const problemItems = [
   'כמה נקודות יש לו',
-  'כמה חסר לו לפרס',
+  'מה הפרס הבא שלו',
   'אם קיבל הטבה על יום הולדת',
   'מה הוא מקבל אם הוא מזמין חבר',
 ]
@@ -302,7 +302,7 @@ export default function HeProblemSolution() {
               וכשהלקוח רואה את ההתקדמות שלו —
               הוא חוזר כדי להשלים אותה.
               <br /><br />
-              <strong style={{ color: '#141d21', fontFamily: 'var(--font-heading)', fontSize: 18 }}>
+              <strong style={{ color: '#811b32', fontFamily: 'var(--font-heading)', fontSize: 18 }}>
                 זאת נאמנות אמיתית.
               </strong>
             </div>

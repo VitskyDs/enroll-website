@@ -64,21 +64,20 @@ export default function HeNavbar() {
     <>
       <nav style={navStyle}>
         <div style={innerStyle}>
-          <a href="#" style={logoStyle}>
+          <a href="/he" style={logoStyle}>
             <img src="/logo-mark.svg" alt="Enroll" style={{ width: 32, height: 32 }} />
             אנרול
           </a>
 
           <div className="nav-links-desktop" style={{ display: 'flex', alignItems: 'center' }}>
-            <a href="#how-it-works" style={linkStyle(true)}>איך זה עובד</a>
-            <a href="#why-enroll" style={linkStyle(false)}>למה אנרול</a>
-            <a href="#pricing" style={linkStyle(false)}>תמחור</a>
+            <a href="/he#how-it-works" style={linkStyle(true)}>איך זה עובד</a>
+            <a href="/he#why-enroll" style={linkStyle(false)}>למה אנרול</a>
           </div>
 
           <button
             className="nav-cta-desktop"
             style={ctaBtnStyle}
-            onClick={() => document.getElementById('final-cta')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() => { window.location.href = '/he#final-cta' }}
             onMouseEnter={e => e.target.style.background = '#6b1529'}
             onMouseLeave={e => e.target.style.background = '#811b32'}
           >
@@ -111,14 +110,13 @@ export default function HeNavbar() {
 
       {menuOpen && (
         <div style={mobileMenuStyle} onClick={() => setMenuOpen(false)}>
-          <a href="#how-it-works" style={mobileLinkStyle}>איך זה עובד</a>
-          <a href="#why-enroll" style={mobileLinkStyle}>למה אנרול</a>
-          <a href="#pricing" style={mobileLinkStyle}>תמחור</a>
+          <a href="/he#how-it-works" style={mobileLinkStyle}>איך זה עובד</a>
+          <a href="/he#why-enroll" style={mobileLinkStyle}>למה אנרול</a>
           <button
             style={{ ...ctaBtnStyle, fontSize: 16, padding: '14px 32px' }}
             onClick={() => {
               setMenuOpen(false)
-              document.getElementById('final-cta')?.scrollIntoView({ behavior: 'smooth' })
+              window.location.href = '/he#final-cta'
             }}
           >
             הצטרפות לרשימת המתנה
