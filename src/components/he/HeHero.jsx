@@ -136,7 +136,7 @@ export default function HeHero() {
         {/* Left column — Dashboard mockup (appears on right in RTL) */}
         <div className="hero-right" style={{ position: 'relative', width: '100%', minHeight: 550 }}>
           <img
-            src="/hero-coffee.jpg"
+            src="/hero-coffee-he.png"
             alt="Coffee shop"
             style={{
               width: 319, borderRadius: 32, position: 'absolute', right: 0, top: 0,
@@ -157,7 +157,7 @@ export default function HeHero() {
               display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
             }}>
               <span style={{ color: '#fff', fontWeight: 900, fontSize: 20, fontFamily: 'var(--font-heading)' }}>45</span>
-              <span style={{ color: 'rgba(255,255,255,0.7)', fontSize: 8, fontWeight: 600 }}>★</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="rgba(255,255,255,0.7)" style={{ marginTop: 2 }}><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
             </div>
 
             {/* User info */}
@@ -166,9 +166,9 @@ export default function HeHero() {
                 width: 48, height: 48, borderRadius: '50%', background: '#fbddc4',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                 fontFamily: 'var(--font-body)', fontWeight: 700, fontSize: 16, color: '#7b001f',
-              }}>שר</div>
+              }}>מי</div>
               <div>
-                <div style={{ fontWeight: 700, fontSize: 18, color: '#271809', fontFamily: 'var(--font-body)' }}>התקדמות הלקוחה שרה</div>
+                <div style={{ fontWeight: 700, fontSize: 18, color: '#271809', fontFamily: 'var(--font-body)' }}>התקדמות הלקוחה מיכל</div>
                 <div style={{ fontWeight: 700, fontSize: 12, color: '#594141', letterSpacing: '1.2px', textTransform: 'uppercase', fontFamily: 'var(--font-body)' }}>חברת מועדון</div>
               </div>
             </div>
