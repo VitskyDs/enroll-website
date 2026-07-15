@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react'
 
 const steps = [
   {
-    title: 'נאמנות מדורגת',
+    title: 'מועדון לקוחות מדורג',
     desc: 'עוברים מ"כוס עשירית חינם" למערכת חכמה יותר — עם הטבות ודרגות.',
   },
   {

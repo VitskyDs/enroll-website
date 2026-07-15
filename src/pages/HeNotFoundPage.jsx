@@ -11,7 +11,7 @@ export default function HeNotFoundPage() {
       padding: '24px', fontFamily: 'var(--font-body)',
     }}>
       {/* Logo */}
-      <a href="/he" style={{
+      <a href="/" style={{
         display: 'flex', alignItems: 'center', gap: 8, marginBottom: 64,
         fontFamily: 'var(--font-heading)', fontWeight: 700,
         fontSize: 22, color: '#61001d', letterSpacing: '-1px',
@@ -46,7 +46,7 @@ export default function HeNotFoundPage() {
 
       {/* CTA */}
       <button
-        onClick={() => navigate('/he')}
+        onClick={() => navigate('/')}
         style={{
           marginTop: 40, height: 56, padding: '0 40px',
           background: '#811b32', color: '#fff', border: 'none',

@@ -103,7 +103,7 @@ export default function HeHero() {
             fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 64,
             lineHeight: 1.2, letterSpacing: '-1.8px', margin: 0,
           }}>
-            <span style={{ color: '#141d21' }}>הלקוחות הקבועים שלך<br />ראויים לנאמנות<br /></span>
+            <span style={{ color: '#141d21' }}>הלקוחות הקבועים שלך<br />ראויים למועדון לקוחות<br /></span>
             <span style={{ color: '#811b32' }}>ברמה של הרשתות הגדולות.</span>
           </h1>
 

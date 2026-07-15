@@ -1,22 +1,22 @@
 const stats = [
   {
-    number: '54 מיליון',
-    label: 'חברי מועדון פעילים',
-    description: 'במועדון הלקוחות של סטארבאקס',
+    number: '150 מיליארד $',
+    label: 'הוצאה שנתית על חיות מחמד בארה״ב',
+    description: 'ענף שרק ממשיך לגדול, ובעליו הגדולים כבר בנו עליו מערכות מועדוני לקוחות שלמות.',
   },
   {
-    number: '40%',
-    label: 'מההכנסות',
-    description: 'חלק משמעותי מהעסקאות של סטארבאקס מונע מתמריצי מועדון הלקוחות.',
+    number: '~70%',
+    label: 'מהבתים מחזיקים חיית מחמד',
+    description: 'קהל ענק שמחפש מקום קבוע לטיפוח, למזון ולציוד — ונשאר נאמן לו.',
   },
   {
-    number: '3.6 מיליארד דולר',
-    label: 'טעינות מראש באפליקציה',
-    description: 'לקוחות חוזרים שוב ושוב כשהם מרגישים מחויבות למותג.',
+    number: 'רוב הבעלים',
+    label: 'לא מחליפים ספק בקלות',
+    description: 'ברגע שבעל חיה מוצא חנות או מספרה שהוא סומך עליה, הוא חוזר שוב ושוב — אם רק תיתנו לו סיבה.',
   },
 ]
 
-export default function HeStatsStrip() {
+export default function PetsStatsStrip() {
   return (
     <section id="why-enroll" style={{ background: '#f4faff', padding: '80px 24px' }}>
       <div style={{ maxWidth: 1280, margin: '0 auto' }}>
@@ -25,11 +25,11 @@ export default function HeStatsStrip() {
             fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: 12,
             textTransform: 'uppercase', letterSpacing: '1.2px', color: '#61001d',
             marginBottom: 8,
-          }}>הסטנדרט</div>
+          }}>הענף</div>
           <h2 style={{
             fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: 36,
             color: '#141d21', lineHeight: '40px', margin: 0,
-          }}>למה מועדון לקוחות חשוב</h2>
+          }}>למה מועדון לקוחות חשוב במיוחד לחנויות חיות מחמד</h2>
         </div>
 
         <div className="stats-grid" style={{
@@ -40,8 +40,8 @@ export default function HeStatsStrip() {
               background: '#fff', borderRadius: 24, padding: 40,
             }}>
               <div style={{
-                fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 48,
-                color: '#61001d', lineHeight: '48px',
+                fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 40,
+                color: '#61001d', lineHeight: '44px',
               }}>{s.number}</div>
               <div style={{
                 fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: 16,

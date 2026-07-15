@@ -21,13 +21,13 @@ export default function HeFooter() {
         </div>
 
         <div className="footer-links" style={{ display: 'flex', gap: 32 }}>
-          <Link to="/he/legal#privacy-policy" style={{
+          <Link to="/legal#privacy-policy" style={{
             fontFamily: 'var(--font-body)', fontSize: 14, color: '#64748b', lineHeight: '20px', textDecoration: 'none',
           }}>מדיניות פרטיות</Link>
-          <Link to="/he/legal#terms-of-service" style={{
+          <Link to="/legal#terms-of-service" style={{
             fontFamily: 'var(--font-body)', fontSize: 14, color: '#64748b', lineHeight: '20px', textDecoration: 'none',
           }}>תנאי שימוש</Link>
-          <Link to="/he/contact" style={{
+          <Link to="/contact" style={{
             fontFamily: 'var(--font-body)', fontSize: 14, color: '#64748b', lineHeight: '20px', textDecoration: 'none',
           }}>צור קשר</Link>
         </div>

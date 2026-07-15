@@ -63,20 +63,20 @@ export default function HeNavbar() {
     <>
       <nav style={navStyle}>
         <div style={innerStyle}>
-          <a href="/he" style={logoStyle}>
+          <a href="/" style={logoStyle}>
             <img src="/logo-mark.svg" alt="Enroll" style={{ width: 32, height: 32 }} />
             אנרול
           </a>
 
           <div className="nav-links-desktop" style={{ display: 'flex', alignItems: 'center' }}>
-            <a href="/he#how-it-works" style={linkStyle(false)}>איך זה עובד</a>
-            <a href="/he#why-enroll" style={linkStyle(false)}>למה אנרול</a>
+            <a href="/#how-it-works" style={linkStyle(false)}>איך זה עובד</a>
+            <a href="/#why-enroll" style={linkStyle(false)}>למה אנרול</a>
           </div>
 
           <button
             className="nav-cta-desktop"
             style={ctaBtnStyle}
-            onClick={() => { window.location.href = '/he#final-cta' }}
+            onClick={() => { window.location.href = '/#final-cta' }}
             onMouseEnter={e => e.target.style.background = '#6b1529'}
             onMouseLeave={e => e.target.style.background = '#811b32'}
           >
@@ -109,13 +109,13 @@ export default function HeNavbar() {
 
       {menuOpen && (
         <div style={mobileMenuStyle} onClick={() => setMenuOpen(false)}>
-          <a href="/he#how-it-works" style={mobileLinkStyle}>איך זה עובד</a>
-          <a href="/he#why-enroll" style={mobileLinkStyle}>למה אנרול</a>
+          <a href="/#how-it-works" style={mobileLinkStyle}>איך זה עובד</a>
+          <a href="/#why-enroll" style={mobileLinkStyle}>למה אנרול</a>
           <button
             style={{ ...ctaBtnStyle, fontSize: 16, padding: '14px 32px' }}
             onClick={() => {
               setMenuOpen(false)
-              window.location.href = '/he#final-cta'
+              window.location.href = '/#final-cta'
             }}
           >
             הצטרפות לרשימת המתנה

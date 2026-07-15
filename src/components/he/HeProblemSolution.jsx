@@ -30,7 +30,7 @@ function ConfusedCard() {
           <div style={{
             background: '#e8e2e2', borderRadius: 8, padding: '6px 14px',
             fontFamily: 'var(--font-body)', fontWeight: 700, fontSize: 13, color: '#999',
-          }}>כרטיס נאמנות</div>
+          }}>כרטיס מועדון</div>
           <div style={{
             fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: 15, color: '#bbb',
           }}>קפה X</div>
@@ -200,12 +200,12 @@ export default function HeProblemSolution() {
             <h2 style={{
               fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: 40,
               color: '#141d21', lineHeight: '48px', margin: '0 0 20px',
-            }}>הבעיה בתוכניות נאמנות היום</h2>
+            }}>הבעיה במועדוני לקוחות היום</h2>
             <p style={{
               fontFamily: 'var(--font-body)', fontSize: 18, color: '#576065',
               lineHeight: '28px', marginBottom: 32,
             }}>
-              רוב תוכניות הנאמנות נבנות מנקודת המבט של העסק —
+              רוב מועדוני הלקוחות נבנים מנקודת המבט של העסק —
               לא של הלקוח.
               <br /><br />
               הלקוח לא באמת יודע:
@@ -234,9 +234,9 @@ export default function HeProblemSolution() {
               lineHeight: '26px',
             }}>
               חוסר השקיפות הזה גורם לזה שרוב הלקוחות
-              פשוט מפסיקים להתעניין בתוכנית הנאמנות.
+              פשוט מפסיקים להתעניין במועדון הלקוחות.
               <br /><br />
-              <strong style={{ color: '#811b32' }}>תוכנית נאמנות שלא משתמשים בה — לא מייצרת נאמנות.</strong>
+              <strong style={{ color: '#811b32' }}>מועדון לקוחות שלא משתמשים בו — לא יוצר נאמנות אמיתית.</strong>
             </div>
           </div>
 

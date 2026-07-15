@@ -21,7 +21,7 @@ export default function HeFinalCTA() {
           textAlign: 'center', lineHeight: '28px', marginTop: 32, maxWidth: 576,
         }}>
           הצטרפו לרשימת ההמתנה וקבלו 3 חודשים ראשונים
-          של אנרול נאמנות בחינם.
+          של מועדון הלקוחות של אנרול בחינם.
         </p>
 
         <div style={{ marginTop: 32 }}>
