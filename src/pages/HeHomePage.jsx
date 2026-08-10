@@ -4,6 +4,7 @@ import HeStatsStrip from '../components/he/HeStatsStrip'
 import HeProblemSolution from '../components/he/HeProblemSolution'
 import HePlaybook from '../components/he/HePlaybook'
 import HeBentoFeatures from '../components/he/HeBentoFeatures'
+import HeUseCases from '../components/he/HeUseCases'
 import HeFinalCTA from '../components/he/HeFinalCTA'
 import HeFooter from '../components/he/HeFooter'
 
@@ -17,6 +18,7 @@ export default function HeHomePage() {
         <HeStatsStrip />
         <HePlaybook />
         <HeBentoFeatures />
+        <HeUseCases />
         <div className="home-content-section" style={{
           background: '#fff', borderRadius: 64, padding: '32px 24px',
           display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 32,

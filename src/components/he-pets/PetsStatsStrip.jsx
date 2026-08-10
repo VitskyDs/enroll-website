@@ -1,10 +1,5 @@
 const stats = [
   {
-    number: '150 מיליארד $',
-    label: 'הוצאה שנתית על חיות מחמד בארה״ב',
-    description: 'ענף שרק ממשיך לגדול, ובעליו הגדולים כבר בנו עליו מערכות מועדוני לקוחות שלמות.',
-  },
-  {
     number: '~70%',
     label: 'מהבתים מחזיקים חיית מחמד',
     description: 'קהל ענק שמחפש מקום קבוע לטיפוח, למזון ולציוד — ונשאר נאמן לו.',
@@ -33,7 +28,7 @@ export default function PetsStatsStrip() {
         </div>
 
         <div className="stats-grid" style={{
-          display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 32,
+          display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 32, maxWidth: 860, margin: '0 auto',
         }}>
           {stats.map((s, i) => (
             <div key={i} style={{

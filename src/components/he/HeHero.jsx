@@ -177,7 +177,7 @@ export default function HeHero() {
             <div style={{ marginBottom: 24 }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 8 }}>
                 <span style={{ fontWeight: 700, fontSize: 12, color: '#ac3400', fontFamily: 'var(--font-body)' }}>עוד 3 ביקורים!</span>
-                <span style={{ fontWeight: 700, fontSize: 14, color: '#271809', fontFamily: 'var(--font-body)' }}>7/10 חותמות</span>
+                <span style={{ fontWeight: 700, fontSize: 14, color: '#271809', fontFamily: 'var(--font-body)' }}>7/10 ניקובים</span>
               </div>
               <div style={{
                 display: 'flex', gap: 6, background: '#fff1e7', borderRadius: 9999, padding: 2, height: 12,

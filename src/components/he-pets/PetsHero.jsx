@@ -33,7 +33,7 @@ export default function PetsHero() {
           }}>
             חנויות ומספרות חיות מחמד עצמאיות הן המקום שבו כל כלב וחתול בשכונה מוכר בשם.
             אנרול נותנת לכם מועדון לקוחות ומנויים ברמה של הרשתות הגדולות —
-            בהתאמה אישית למותג שלכם, מוכנה תוך ימים.
+            בהתאמה אישית למותג שלכם, מוכן תוך ימים.
           </p>
 
           <div style={{ marginTop: 32, paddingTop: 16 }}>
@@ -48,7 +48,7 @@ export default function PetsHero() {
               <path d="M3.5 6l2 2 3-3" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
             <span style={{ fontFamily: 'var(--font-body)', fontSize: 14, color: '#564143' }}>
-              ללא כרטיס אשראי • ללא ציוד נוסף • 100% דיגיטלי
+              ללא כרטיס אשראי • 100% דיגיטלי
             </span>
           </div>
         </div>
@@ -77,7 +77,7 @@ export default function PetsHero() {
                 display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 22,
               }}>🐶</div>
               <div>
-                <div style={{ fontWeight: 700, fontSize: 18, color: '#271809', fontFamily: 'var(--font-body)' }}>התקדמות הלקוח דני ורקסי</div>
+                <div style={{ fontWeight: 700, fontSize: 18, color: '#271809', fontFamily: 'var(--font-body)' }}>התקדמות הלקוח דני</div>
                 <div style={{ fontWeight: 700, fontSize: 12, color: '#594141', letterSpacing: '1.2px', textTransform: 'uppercase', fontFamily: 'var(--font-body)' }}>חבר מועדון</div>
               </div>
             </div>
@@ -86,7 +86,7 @@ export default function PetsHero() {
             <div style={{ marginBottom: 24 }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 8 }}>
                 <span style={{ fontWeight: 700, fontSize: 12, color: '#ac3400', fontFamily: 'var(--font-body)' }}>עוד 3 ביקורים לטיפוח חינם!</span>
-                <span style={{ fontWeight: 700, fontSize: 14, color: '#271809', fontFamily: 'var(--font-body)' }}>7/10 חותמות</span>
+                <span style={{ fontWeight: 700, fontSize: 14, color: '#271809', fontFamily: 'var(--font-body)' }}>7/10 ניקובים</span>
               </div>
               <div style={{
                 display: 'flex', gap: 6, background: '#fff1e7', borderRadius: 9999, padding: 2, height: 12,
@@ -108,7 +108,7 @@ export default function PetsHero() {
             }}>
               <span style={{ fontSize: 20 }}>🎂</span>
               <div>
-                <div style={{ fontWeight: 700, fontSize: 14, color: '#154413', fontFamily: 'var(--font-body)' }}>מתנת יום הולדת לרקסי — פעילה</div>
+                <div style={{ fontWeight: 700, fontSize: 14, color: '#154413', fontFamily: 'var(--font-body)' }}>מתנת יום הולדת לדני — פעילה</div>
                 <div style={{ fontSize: 12, color: 'rgba(21,68,19,0.7)', fontFamily: 'var(--font-body)' }}>בתוקף עד 24 באוקטובר</div>
               </div>
             </div>
